@@ -1,0 +1,31 @@
+11:23:23 **** Incremental Build of configuration Debug for project TP06 ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"/Users/mathisvalencia/Documents/µP/IDE-STM32/TP06/Drivers/display" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'openSequence' [-Wimplicit-function-declaration]
+   99 |   openSequence();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:294:6: warning: conflicting types for 'openSequence'; have 'void(uint32_t)' {aka 'void(long unsigned int)'}
+  294 | void openSequence(uint32_t){
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:99:3: note: previous implicit declaration of 'openSequence' with type 'void(uint32_t)' {aka 'void(long unsigned int)'}
+   99 |   openSequence();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:62:13: warning: 'MAX7219_SendByte' defined but not used [-Wunused-function]
+   62 | static void MAX7219_SendByte(unsigned char dataout){
+      |             ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "TP06.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/mathisvalencia/Documents/µP/IDE-STM32/TP06/STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP06.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP06.elf
+ 
+arm-none-eabi-size  TP06.elf 
+arm-none-eabi-objdump -h -S TP06.elf  > "TP06.list"
+   text	   data	    bss	    dec	    hex	filename
+  14440	    108	   2068	  16616	   40e8	TP06.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP06.list
+ 
+
+11:23:23 Build Finished. 0 errors, 3 warnings. (took 554ms)
+

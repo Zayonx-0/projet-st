@@ -1,0 +1,10 @@
+13:31:09 **** Incremental Build of configuration Debug for project TP01_GPIO ****
+make -j7 all 
+arm-none-eabi-size  TP01_GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+    852	      4	   1572	   2428	    97c	TP01_GPIO.elf
+Finished building: default.size.stdout
+ 
+
+13:31:09 Build Finished. 0 errors, 0 warnings. (took 228ms)
+

@@ -1,0 +1,75 @@
+13:55:00 **** Incremental Build of configuration Debug for project TP4_PWM ****
+make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:100:3: warning: data definition has no type or storage class
+  100 |   HAL_Init();
+      |   ^~~~~~~~
+../Core/Src/main.c:100:3: warning: type defaults to 'int' in declaration of 'HAL_Init' [-Wimplicit-int]
+../Core/Src/main.c:100:3: error: conflicting types for 'HAL_Init'; have 'int()'
+In file included from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:927:19: note: previous declaration of 'HAL_Init' with type 'HAL_StatusTypeDef(void)'
+  927 | HAL_StatusTypeDef HAL_Init(void);
+      |                   ^~~~~~~~
+../Core/Src/main.c:107:3: warning: data definition has no type or storage class
+  107 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:107:3: warning: type defaults to 'int' in declaration of 'SystemClock_Config' [-Wimplicit-int]
+../Core/Src/main.c:107:3: error: conflicting types for 'SystemClock_Config'; have 'int()'
+../Core/Src/main.c:72:6: note: previous declaration of 'SystemClock_Config' with type 'void(void)'
+   72 | void SystemClock_Config(void);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:114:3: warning: data definition has no type or storage class
+  114 |   MX_GPIO_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:114:3: warning: type defaults to 'int' in declaration of 'MX_GPIO_Init' [-Wimplicit-int]
+../Core/Src/main.c:114:3: error: conflicting types for 'MX_GPIO_Init'; have 'int()'
+../Core/Src/main.c:51:13: note: previous declaration of 'MX_GPIO_Init' with type 'void(void)'
+   51 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:115:3: warning: data definition has no type or storage class
+  115 |   MX_USART2_UART_Init();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:115:3: warning: type defaults to 'int' in declaration of 'MX_USART2_UART_Init' [-Wimplicit-int]
+../Core/Src/main.c:115:3: error: conflicting types for 'MX_USART2_UART_Init'; have 'int()'
+../Core/Src/main.c:52:13: note: previous declaration of 'MX_USART2_UART_Init' with type 'void(void)'
+   52 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:3: error: expected identifier or '(' before 'while'
+  122 |   while (1)
+      |   ^~~~~
+../Core/Src/main.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+../Core/Src/main.c:136:6: error: conflicting types for 'MX_GPIO_Init'; have 'void(void)'
+  136 | void MX_GPIO_Init(void)
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:114:3: note: previous declaration of 'MX_GPIO_Init' with type 'int()'
+  114 |   MX_GPIO_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:200:13: error: conflicting types for 'MX_USART2_UART_Init'; have 'void(void)'
+  200 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:115:3: note: previous declaration of 'MX_USART2_UART_Init' with type 'int()'
+  115 |   MX_USART2_UART_Init();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:233:13: error: redefinition of 'MX_GPIO_Init'
+  233 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:136:6: note: previous definition of 'MX_GPIO_Init' with type 'void(void)'
+  136 | void MX_GPIO_Init(void)
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_GPIO_Init' used but never defined
+   51 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:233:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  233 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:200:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  200 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+13:55:00 Build Failed. 10 errors, 11 warnings. (took 255ms)
+

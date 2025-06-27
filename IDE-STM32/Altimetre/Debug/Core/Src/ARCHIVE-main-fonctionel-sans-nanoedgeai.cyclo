@@ -1,0 +1,14 @@
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:78:5:main	1
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:135:6:SystemClock_Config	3
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:179:13:MX_ADC_Init	3
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:234:13:MX_I2C1_Init	2
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:268:13:MX_TIM3_Init	4
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:314:13:MX_USART2_UART_Init	2
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:347:13:MX_GPIO_Init	1
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:392:5:__io_putchar	1
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:397:10:lire_adc	1
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:405:7:lire_pression_LPS22HH	2
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:423:6:scan_i2c_bus	3
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:436:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:449:6:HAL_GPIO_EXTI_Callback	3
+../Core/Src/ARCHIVE-main-fonctionel-sans-nanoedgeai.c:467:6:Error_Handler	1

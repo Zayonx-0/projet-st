@@ -1,0 +1,10 @@
+16:28:29 **** Incremental Build of configuration Debug for project Pressure-Sensor ****
+make -j7 all 
+arm-none-eabi-size  Pressure-Sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25728	    104	   2144	  27976	   6d48	Pressure-Sensor.elf
+Finished building: default.size.stdout
+ 
+
+16:28:30 Build Finished. 0 errors, 0 warnings. (took 333ms)
+
